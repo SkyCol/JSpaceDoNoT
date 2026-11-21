@@ -1,0 +1,23 @@
+{
+  "dataset_id": "ehovy/race",
+  "config": "high",
+  "revision": "2fec9fd81f1dc971569a9b729c43f2f0e6436637",
+  "answer_type": "multiple_choice_letter",
+  "splits": {
+    "train": {
+      "questions": 62445,
+      "passage_groups": 18724,
+      "file": "race_high_train.json"
+    },
+    "validation": {
+      "questions": 3451,
+      "passage_groups": 1021,
+      "file": "race_high_validation.json"
+    },
+    "test": {
+      "questions": 3498,
+      "passage_groups": 1045,
+      "file": "race_high_test.json"
+    }
+  }
+}

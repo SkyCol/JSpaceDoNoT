@@ -1,0 +1,37 @@
+test_batch_seed_member_keys_padding_and_auto_reuse (test_generation_cache.GenerationCache.test_batch_seed_member_keys_padding_and_auto_reuse) ... GSM8K source batches: 4/5
+GSM8K source batches: 5/5
+ok
+test_changed_fresh_cohort_does_not_regroup (test_generation_cache.GenerationCache.test_changed_fresh_cohort_does_not_regroup) ... GSM8K source batches: 4/5
+GSM8K source batches: 5/5
+ok
+test_defaults_and_incompatible_off_historical (test_generation_cache.GenerationCache.test_defaults_and_incompatible_off_historical) ... ok
+test_read_only_miss_fails_before_model (test_generation_cache.GenerationCache.test_read_only_miss_fails_before_model) ... ok
+test_exact_lr_decomposition (test_parity_interpretation.Interpretation.test_exact_lr_decomposition) ... ok
+test_ig_completeness (test_parity_interpretation.Interpretation.test_ig_completeness) ... ok
+test_mlp_both_standardizations (test_parity_interpretation.Interpretation.test_mlp_both_standardizations) ... ok
+test_saved_bundle_cpu_interpretation_and_case_apis (test_parity_interpretation.Interpretation.test_saved_bundle_cpu_interpretation_and_case_apis) ... ok
+test_checked_in_source_function_parity (test_parity_interpretation.ScientificParity.test_checked_in_source_function_parity) ... ok
+test_raw_feature_layer_major_order_and_no_temporal_inputs (test_parity_interpretation.ScientificParity.test_raw_feature_layer_major_order_and_no_temporal_inputs) ... ok
+test_training_heads_with_question_balancing (test_parity_interpretation.ScientificParity.test_training_heads_with_question_balancing) ... ok
+test_token_schedule (test_pipeline.CLI.test_token_schedule) ... ok
+test_wait_schedule (test_pipeline.CLI.test_wait_schedule) ... ok
+test_zero_interval_rejected (test_pipeline.CLI.test_zero_interval_rejected) ... ok
+test_fallback_full (test_pipeline.Policies.test_fallback_full) ... ok
+test_representations_only_j (test_pipeline.Policies.test_representations_only_j) ... ok
+test_stop_only_when_usable_and_above_cutoff (test_pipeline.Policies.test_stop_only_when_usable_and_above_cutoff) ... ok
+test_every_n_checks (test_pipeline.Schedules.test_every_n_checks) ... ok
+test_no_fake_wait_substring (test_pipeline.Schedules.test_no_fake_wait_substring) ... ok
+test_wait_cue_boundary_and_lookahead (test_pipeline.Schedules.test_wait_cue_boundary_and_lookahead) ... ok
+test_bad_gold_rejected (test_prepare_gsm8k.GSM8KPreparation.test_bad_gold_rejected) ... ok
+test_duplicate_rejected (test_prepare_gsm8k.GSM8KPreparation.test_duplicate_rejected) ... ok
+test_gold (test_prepare_gsm8k.GSM8KPreparation.test_gold) ... ok
+test_rows (test_prepare_gsm8k.GSM8KPreparation.test_rows) ... ok
+test_real_backbone_hooks_lens_transport_and_score_readout (test_readout_cpu.TinyQwenReadout.test_real_backbone_hooks_lens_transport_and_score_readout) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 4.752s
+
+OK
+Saved all three independent heatmaps.
+Saved Appendix figures to: /tmp/tmp6qr7gu8m/interpretation
+Shared color scale maximum: 9.943187729097982

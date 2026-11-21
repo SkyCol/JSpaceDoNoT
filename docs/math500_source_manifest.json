@@ -1,0 +1,15 @@
+{
+  "train_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+  "test_revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+  "train_source": "EleutherAI/hendrycks_math: train, seven subjects",
+  "test_source": "HuggingFaceH4/MATH-500: test",
+  "train_n": 7495,
+  "test_n": 500,
+  "original_train_n": 7500,
+  "unboxed_training_skipped": 4,
+  "unknown_training_levels": 2,
+  "overlap": 0,
+  "train_sha256": "269d0099642e4f9e24702982e973b13a5316dc91bfb7bb8da4bea568bc1783a0",
+  "test_sha256": "0f028238d7041d42579160f4249de4d441908e5f452ce7f0448a69ff5c13e9d6",
+  "gold": "last balanced boxed expression in TRAIN solution; original MATH-500 answer field in TEST"
+}

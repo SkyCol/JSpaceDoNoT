@@ -1,0 +1,305 @@
+{
+  "gsm8k": {
+    "decoded_bounds": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "aa47738ce02a0864cb535b399608a308fa38374f8699de1542c675a33e498a7b",
+      "packaged_ast_sha256": "aa47738ce02a0864cb535b399608a308fa38374f8699de1542c675a33e498a7b"
+    },
+    "marker_events": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "bf807af834fcc6fb42bf28d570f4e85c458d8b5930bfda4225ac07b4c4d9acff",
+      "packaged_ast_sha256": "bf807af834fcc6fb42bf28d570f4e85c458d8b5930bfda4225ac07b4c4d9acff"
+    },
+    "scheduled_events": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b33a18b3faefb98f33e88caeaa5f69910c06b23017d31a31992b61ab3b6c644d",
+      "packaged_ast_sha256": "b33a18b3faefb98f33e88caeaa5f69910c06b23017d31a31992b61ab3b6c644d"
+    },
+    "raw_only_vectors": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "0b25d175d413a609756506c2d89a177a70fbf4655768691ccdc482cdd51d027f",
+      "packaged_ast_sha256": "0b25d175d413a609756506c2d89a177a70fbf4655768691ccdc482cdd51d027f"
+    },
+    "full_score_vectors": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "d58c41b9bc24358827c987fad291d03dce56905fcbde564c4f114869a5d906f4",
+      "packaged_ast_sha256": "d58c41b9bc24358827c987fad291d03dce56905fcbde564c4f114869a5d906f4"
+    },
+    "fit_classifier": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b379da061dc2dd106e05c9d9ab3dde20b440d9a922439dc14720d8bea9b4761b",
+      "packaged_ast_sha256": "b379da061dc2dd106e05c9d9ab3dde20b440d9a922439dc14720d8bea9b4761b"
+    },
+    "predict_classifier": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "186dc8fd430e28c981a09d36bdb86b767d1746d850ca72a01980b3b5de176902",
+      "packaged_ast_sha256": "186dc8fd430e28c981a09d36bdb86b767d1746d850ca72a01980b3b5de176902",
+      "original_definition_index": 0,
+      "note": "Original J++ implementation before unrelated hidden-control dispatcher wrapper"
+    },
+    "stop_decision": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "163f55387b3ad6f8031522f0a122b49c848d82e3a52a191a732b678f0a02f72d",
+      "packaged_ast_sha256": "163f55387b3ad6f8031522f0a122b49c848d82e3a52a191a732b678f0a02f72d",
+      "original_definition_index": 0,
+      "note": "Original J++ implementation before unrelated hidden-control dispatcher wrapper"
+    },
+    "outcome_at": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "db381e33b5f49a3daf0eba3de3e92abb335966c113b1c85ca9c0fed3b3b6c2a7",
+      "packaged_ast_sha256": "db381e33b5f49a3daf0eba3de3e92abb335966c113b1c85ca9c0fed3b3b6c2a7"
+    },
+    "metrics": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "cbf165051007346878bc5990ee2787b8a07daf09408afac2c43791caf9bf485f",
+      "packaged_ast_sha256": "cbf165051007346878bc5990ee2787b8a07daf09408afac2c43791caf9bf485f"
+    },
+    "pareto": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "6798d9a825e1e29053c3d54d92b3866974910a6b1f72928650382d6178998e7e",
+      "packaged_ast_sha256": "6798d9a825e1e29053c3d54d92b3866974910a6b1f72928650382d6178998e7e"
+    },
+    "score_answer": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "1518c18461dfccc2eb3d2cd94906c596901ebbf5866a702d59d1034caafee6f4",
+      "packaged_ast_sha256": "1518c18461dfccc2eb3d2cd94906c596901ebbf5866a702d59d1034caafee6f4"
+    },
+    "read_dataset": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "0227d216bde1d7b0760d9c9c70b5dab3aeb25c746efc9f0fb2fc66f706bb5f4e",
+      "packaged_ast_sha256": "0227d216bde1d7b0760d9c9c70b5dab3aeb25c746efc9f0fb2fc66f706bb5f4e"
+    },
+    "thinking_end": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "33662aa3af71ee43da045025ff2121608e4f8064374c0a3c0dc7b4220ec31274",
+      "packaged_ast_sha256": "33662aa3af71ee43da045025ff2121608e4f8064374c0a3c0dc7b4220ec31274"
+    },
+    "modular_probe_signature": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "96939da571f08df791106b4c6a6a7dd6b8d90fd894d4d98132efb4e9b1752242",
+      "packaged_ast_sha256": "96939da571f08df791106b4c6a6a7dd6b8d90fd894d4d98132efb4e9b1752242"
+    },
+    "answer_probe": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "081ed744b716f08a2e0726c55ee96dd902d127260168922f48f105d1d1f242fe",
+      "packaged_ast_sha256": "081ed744b716f08a2e0726c55ee96dd902d127260168922f48f105d1d1f242fe"
+    },
+    "compute_token_readout": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "72966acb1ddb191cf5f46858b069241bd3b1f3dc4d3d96d0c2a4058578850da2",
+      "packaged_ast_sha256": "72966acb1ddb191cf5f46858b069241bd3b1f3dc4d3d96d0c2a4058578850da2"
+    },
+    "token_candidate_pool": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "59d854cba3341e7b5c3e804dc4a3de5d66abff41f4e73eef4f338d8f1652c540",
+      "packaged_ast_sha256": "59d854cba3341e7b5c3e804dc4a3de5d66abff41f4e73eef4f338d8f1652c540"
+    },
+    "top_allowed_ids": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "e395b195363026a90aee30344af68cbb3882914ad50696c0bd66fc0c1c876faa",
+      "packaged_ast_sha256": "e395b195363026a90aee30344af68cbb3882914ad50696c0bd66fc0c1c876faa"
+    }
+  },
+  "math500": {
+    "decoded_bounds": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "aa47738ce02a0864cb535b399608a308fa38374f8699de1542c675a33e498a7b",
+      "packaged_ast_sha256": "aa47738ce02a0864cb535b399608a308fa38374f8699de1542c675a33e498a7b"
+    },
+    "marker_events": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "bf807af834fcc6fb42bf28d570f4e85c458d8b5930bfda4225ac07b4c4d9acff",
+      "packaged_ast_sha256": "bf807af834fcc6fb42bf28d570f4e85c458d8b5930bfda4225ac07b4c4d9acff"
+    },
+    "scheduled_events": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b33a18b3faefb98f33e88caeaa5f69910c06b23017d31a31992b61ab3b6c644d",
+      "packaged_ast_sha256": "b33a18b3faefb98f33e88caeaa5f69910c06b23017d31a31992b61ab3b6c644d"
+    },
+    "raw_only_vectors": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "0b25d175d413a609756506c2d89a177a70fbf4655768691ccdc482cdd51d027f",
+      "packaged_ast_sha256": "0b25d175d413a609756506c2d89a177a70fbf4655768691ccdc482cdd51d027f"
+    },
+    "full_score_vectors": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "d58c41b9bc24358827c987fad291d03dce56905fcbde564c4f114869a5d906f4",
+      "packaged_ast_sha256": "d58c41b9bc24358827c987fad291d03dce56905fcbde564c4f114869a5d906f4"
+    },
+    "fit_classifier": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b379da061dc2dd106e05c9d9ab3dde20b440d9a922439dc14720d8bea9b4761b",
+      "packaged_ast_sha256": "b379da061dc2dd106e05c9d9ab3dde20b440d9a922439dc14720d8bea9b4761b"
+    },
+    "predict_classifier": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "186dc8fd430e28c981a09d36bdb86b767d1746d850ca72a01980b3b5de176902",
+      "packaged_ast_sha256": "186dc8fd430e28c981a09d36bdb86b767d1746d850ca72a01980b3b5de176902",
+      "original_definition_index": 0,
+      "note": "Original J++ implementation before unrelated hidden-control dispatcher wrapper"
+    },
+    "stop_decision": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "163f55387b3ad6f8031522f0a122b49c848d82e3a52a191a732b678f0a02f72d",
+      "packaged_ast_sha256": "163f55387b3ad6f8031522f0a122b49c848d82e3a52a191a732b678f0a02f72d",
+      "original_definition_index": 0,
+      "note": "Original J++ implementation before unrelated hidden-control dispatcher wrapper"
+    },
+    "outcome_at": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "db381e33b5f49a3daf0eba3de3e92abb335966c113b1c85ca9c0fed3b3b6c2a7",
+      "packaged_ast_sha256": "db381e33b5f49a3daf0eba3de3e92abb335966c113b1c85ca9c0fed3b3b6c2a7"
+    },
+    "metrics": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "cbf165051007346878bc5990ee2787b8a07daf09408afac2c43791caf9bf485f",
+      "packaged_ast_sha256": "cbf165051007346878bc5990ee2787b8a07daf09408afac2c43791caf9bf485f"
+    },
+    "pareto": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "6798d9a825e1e29053c3d54d92b3866974910a6b1f72928650382d6178998e7e",
+      "packaged_ast_sha256": "6798d9a825e1e29053c3d54d92b3866974910a6b1f72928650382d6178998e7e"
+    },
+    "score_answer": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "5c754ebf6a1fd45ed2cb938fa86e2a8cfb969f797978e4289814be7dbd7a2e8b",
+      "packaged_ast_sha256": "5c754ebf6a1fd45ed2cb938fa86e2a8cfb969f797978e4289814be7dbd7a2e8b"
+    },
+    "read_dataset": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "0227d216bde1d7b0760d9c9c70b5dab3aeb25c746efc9f0fb2fc66f706bb5f4e",
+      "packaged_ast_sha256": "0227d216bde1d7b0760d9c9c70b5dab3aeb25c746efc9f0fb2fc66f706bb5f4e"
+    },
+    "thinking_end": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "33662aa3af71ee43da045025ff2121608e4f8064374c0a3c0dc7b4220ec31274",
+      "packaged_ast_sha256": "33662aa3af71ee43da045025ff2121608e4f8064374c0a3c0dc7b4220ec31274"
+    },
+    "modular_probe_signature": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "96939da571f08df791106b4c6a6a7dd6b8d90fd894d4d98132efb4e9b1752242",
+      "packaged_ast_sha256": "96939da571f08df791106b4c6a6a7dd6b8d90fd894d4d98132efb4e9b1752242"
+    },
+    "answer_probe": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "3ed9ee28db58d1d216cdd1c6f188195d56706a12b27f3be5313ec4055e636cad",
+      "packaged_ast_sha256": "3ed9ee28db58d1d216cdd1c6f188195d56706a12b27f3be5313ec4055e636cad"
+    },
+    "compute_token_readout": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "72966acb1ddb191cf5f46858b069241bd3b1f3dc4d3d96d0c2a4058578850da2",
+      "packaged_ast_sha256": "72966acb1ddb191cf5f46858b069241bd3b1f3dc4d3d96d0c2a4058578850da2"
+    },
+    "token_candidate_pool": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "59d854cba3341e7b5c3e804dc4a3de5d66abff41f4e73eef4f338d8f1652c540",
+      "packaged_ast_sha256": "59d854cba3341e7b5c3e804dc4a3de5d66abff41f4e73eef4f338d8f1652c540"
+    },
+    "top_allowed_ids": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "e395b195363026a90aee30344af68cbb3882914ad50696c0bd66fc0c1c876faa",
+      "packaged_ast_sha256": "e395b195363026a90aee30344af68cbb3882914ad50696c0bd66fc0c1c876faa"
+    }
+  },
+  "raceh": {
+    "decoded_bounds": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "aa47738ce02a0864cb535b399608a308fa38374f8699de1542c675a33e498a7b",
+      "packaged_ast_sha256": "aa47738ce02a0864cb535b399608a308fa38374f8699de1542c675a33e498a7b"
+    },
+    "marker_events": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "bf807af834fcc6fb42bf28d570f4e85c458d8b5930bfda4225ac07b4c4d9acff",
+      "packaged_ast_sha256": "bf807af834fcc6fb42bf28d570f4e85c458d8b5930bfda4225ac07b4c4d9acff"
+    },
+    "scheduled_events": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b33a18b3faefb98f33e88caeaa5f69910c06b23017d31a31992b61ab3b6c644d",
+      "packaged_ast_sha256": "b33a18b3faefb98f33e88caeaa5f69910c06b23017d31a31992b61ab3b6c644d"
+    },
+    "raw_only_vectors": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "0b25d175d413a609756506c2d89a177a70fbf4655768691ccdc482cdd51d027f",
+      "packaged_ast_sha256": "0b25d175d413a609756506c2d89a177a70fbf4655768691ccdc482cdd51d027f"
+    },
+    "full_score_vectors": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "d58c41b9bc24358827c987fad291d03dce56905fcbde564c4f114869a5d906f4",
+      "packaged_ast_sha256": "d58c41b9bc24358827c987fad291d03dce56905fcbde564c4f114869a5d906f4"
+    },
+    "fit_classifier": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b379da061dc2dd106e05c9d9ab3dde20b440d9a922439dc14720d8bea9b4761b",
+      "packaged_ast_sha256": "b379da061dc2dd106e05c9d9ab3dde20b440d9a922439dc14720d8bea9b4761b"
+    },
+    "predict_classifier": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "186dc8fd430e28c981a09d36bdb86b767d1746d850ca72a01980b3b5de176902",
+      "packaged_ast_sha256": "186dc8fd430e28c981a09d36bdb86b767d1746d850ca72a01980b3b5de176902",
+      "original_definition_index": 0,
+      "note": "Original J++ implementation before unrelated hidden-control dispatcher wrapper"
+    },
+    "stop_decision": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "163f55387b3ad6f8031522f0a122b49c848d82e3a52a191a732b678f0a02f72d",
+      "packaged_ast_sha256": "163f55387b3ad6f8031522f0a122b49c848d82e3a52a191a732b678f0a02f72d",
+      "original_definition_index": 0,
+      "note": "Original J++ implementation before unrelated hidden-control dispatcher wrapper"
+    },
+    "outcome_at": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "db381e33b5f49a3daf0eba3de3e92abb335966c113b1c85ca9c0fed3b3b6c2a7",
+      "packaged_ast_sha256": "db381e33b5f49a3daf0eba3de3e92abb335966c113b1c85ca9c0fed3b3b6c2a7"
+    },
+    "metrics": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "cbf165051007346878bc5990ee2787b8a07daf09408afac2c43791caf9bf485f",
+      "packaged_ast_sha256": "cbf165051007346878bc5990ee2787b8a07daf09408afac2c43791caf9bf485f"
+    },
+    "pareto": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "6798d9a825e1e29053c3d54d92b3866974910a6b1f72928650382d6178998e7e",
+      "packaged_ast_sha256": "6798d9a825e1e29053c3d54d92b3866974910a6b1f72928650382d6178998e7e"
+    },
+    "score_answer": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "08e0c9d454450dda09d3a3adfdd262a7ac85d7166b3eaa883948ce3f6fd2624a",
+      "packaged_ast_sha256": "08e0c9d454450dda09d3a3adfdd262a7ac85d7166b3eaa883948ce3f6fd2624a"
+    },
+    "read_dataset": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "b0b8a93c598a1981b443642db9f2dad8e6ab3ab8e781a51428af35b357464561",
+      "packaged_ast_sha256": "b0b8a93c598a1981b443642db9f2dad8e6ab3ab8e781a51428af35b357464561"
+    },
+    "thinking_end": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "33662aa3af71ee43da045025ff2121608e4f8064374c0a3c0dc7b4220ec31274",
+      "packaged_ast_sha256": "33662aa3af71ee43da045025ff2121608e4f8064374c0a3c0dc7b4220ec31274"
+    },
+    "modular_probe_signature": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "96939da571f08df791106b4c6a6a7dd6b8d90fd894d4d98132efb4e9b1752242",
+      "packaged_ast_sha256": "96939da571f08df791106b4c6a6a7dd6b8d90fd894d4d98132efb4e9b1752242"
+    },
+    "answer_probe": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "f046e6967bf7b7793605bef296bc41b54982bdebf77a98818074e77f767b6acc",
+      "packaged_ast_sha256": "f046e6967bf7b7793605bef296bc41b54982bdebf77a98818074e77f767b6acc"
+    },
+    "compute_token_readout": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "72966acb1ddb191cf5f46858b069241bd3b1f3dc4d3d96d0c2a4058578850da2",
+      "packaged_ast_sha256": "72966acb1ddb191cf5f46858b069241bd3b1f3dc4d3d96d0c2a4058578850da2"
+    },
+    "token_candidate_pool": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "59d854cba3341e7b5c3e804dc4a3de5d66abff41f4e73eef4f338d8f1652c540",
+      "packaged_ast_sha256": "59d854cba3341e7b5c3e804dc4a3de5d66abff41f4e73eef4f338d8f1652c540"
+    },
+    "top_allowed_ids": {
+      "equal_to_uploaded": true,
+      "uploaded_ast_sha256": "e395b195363026a90aee30344af68cbb3882914ad50696c0bd66fc0c1c876faa",
+      "packaged_ast_sha256": "e395b195363026a90aee30344af68cbb3882914ad50696c0bd66fc0c1c876faa"
+    }
+  }
+}

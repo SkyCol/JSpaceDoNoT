@@ -1,0 +1,14 @@
+{
+  "gsm8k": {
+    "previous_sha256": "a1c9806c5e97e7f580f13896bb57ab0959d16a284eda1ab00e846094ba8c2147",
+    "uploaded_sha256": "77d7424346db36570618722b97f6cae1b73326686297c4d2ced3507b05983ffe"
+  },
+  "math500": {
+    "previous_sha256": "1413684bb593c5ab4f654b9e0273f5900bb2a6633de95a578106f3d84cae8b3c",
+    "uploaded_sha256": "f988b1e0d9daaf544fd62af027270aae49cc7521669f8318fd5e0a19489abed3"
+  },
+  "raceh": {
+    "previous_sha256": "468d52ced7252bc296a82b24b5b16e93f74f358ce4e2e4d03a262a8aefb6e733",
+    "uploaded_sha256": "ef7e1d146d37a49bac3074cba491c3c34b8deed516fbc188e08f1ed73e3f3bde"
+  }
+}

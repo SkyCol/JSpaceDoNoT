@@ -1,0 +1,16 @@
+{
+  "torch": "2.15.0+cpu",
+  "transformers": "4.57.6",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scikit-learn": "1.8.0",
+  "datasets": "5.0.1",
+  "huggingface-hub": "0.36.2",
+  "pyarrow": "26.0.1",
+  "math-verify": "0.9.0",
+  "matplotlib": "3.10.8",
+  "nbformat": "5.11.1",
+  "python": "3.12.14",
+  "device": "CPU",
+  "jpp_commit": "d7efc0de372e20589e899188c0cfe8434acc63ec"
+}

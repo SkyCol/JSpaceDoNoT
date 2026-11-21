@@ -1,0 +1,39 @@
+{
+  "gsm8k": {
+    "calibration": 256,
+    "test": 1319,
+    "calibration_ids_sha256": "fe7e420ac1413f1b8a719d0c9d172613bf8b80266ef925e5afdfa0f58dcfcbd7",
+    "train_sha256": "5e7eb9c561b488610e492667f9a0c2a7d00ae118e77efc5d64dabd381028c2c1",
+    "test_sha256": "e1cf0d4cae84250dd7d174a2f47527593bcb2fd00820203fefbbc7455bc25587"
+  },
+  "math500": {
+    "calibration": 256,
+    "test": 500,
+    "calibration_ids_sha256": "4784a3699b27b03526c202cedf3b7840e7e41d9bde56bbcb20d02d3effafefa6",
+    "train_sha256": "269d0099642e4f9e24702982e973b13a5316dc91bfb7bb8da4bea568bc1783a0",
+    "test_sha256": "0f028238d7041d42579160f4249de4d441908e5f452ce7f0448a69ff5c13e9d6"
+  },
+  "raceh": {
+    "calibration": 256,
+    "test": 3498,
+    "calibration_ids_sha256": "fd9c7727948228d21493a4bee98b2b93b8a89e0905c3b3148aac19ab832e728a",
+    "train_sha256": "445c4f6a862cd968b723c8540c8f1593b00bac6c65118c76690ace25a70de717",
+    "test_sha256": "c853d7385cc0f5792f69ed2063a6d849dd382f510cf32f97a9bb274126557e25",
+    "data_audit": {
+      "dataset": "RACE-H",
+      "train_questions": 62445,
+      "validation_questions": 3451,
+      "test_questions": 3498,
+      "validation_used": false,
+      "train_test_shared_passage_groups": 0,
+      "train_rows_with_test_shared_passage": 0,
+      "train_duplicate_content_rows": 2,
+      "test_duplicate_content_rows": 0,
+      "duplicate_policy": "preserve official rows and group by normalized passage",
+      "exclude_train_test_passage_overlap": true,
+      "selected_train": 256,
+      "selected_test": 3498,
+      "download_manifest_sha256": "df9181ca1a610022b2e63053c338cd9c51f8302bcaa051ade0601bd27efcb0ae"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source": "openai/gsm8k",
+  "revision": "740312add88f781978c0658806c59bc2815b9866",
+  "config": "main",
+  "splits": {
+    "train": 7473,
+    "test": 1319
+  },
+  "format": "question, answer (original reasoning with #### label), gold (normalized decimal)",
+  "normalization": "SHA256 of whitespace-collapsed question",
+  "overlap": 0,
+  "sha256": {
+    "train": "5e7eb9c561b488610e492667f9a0c2a7d00ae118e77efc5d64dabd381028c2c1",
+    "test": "e1cf0d4cae84250dd7d174a2f47527593bcb2fd00820203fefbbc7455bc25587"
+  }
+}
