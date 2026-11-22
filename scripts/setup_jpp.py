@@ -8,7 +8,7 @@ COMMIT='d7efc0de372e20589e899188c0cfe8434acc63ec'
 URL='https://github.com/safety-research/jpp_lens.git'
 
 def main(argv=None):
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=Path('.'));a=p.parse_args(argv)
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=Path('.'));p.add_argument('--source-only',action='store_true',help='Fetch pinned source without changing installed packages');a=p.parse_args(argv)
     dest=a.root.resolve()/'external/jpp_lens'
     dest.parent.mkdir(parents=True,exist_ok=True)
     if not dest.exists():subprocess.run(['git','clone',URL,str(dest)],check=True)
@@ -17,7 +17,8 @@ def main(argv=None):
         dirty=subprocess.check_output(['git','-C',str(dest),'status','--porcelain'],text=True).strip()
         if dirty:raise RuntimeError('Upstream checkout has local changes; refusing to replace them')
         subprocess.run(['git','-C',str(dest),'checkout',COMMIT],check=True)
-    subprocess.run([sys.executable,'-m','pip','install','--no-deps','-e',str(dest)],check=True)
+    if not a.source_only:
+        subprocess.run([sys.executable,'-m','pip','install','--no-deps','-e',str(dest)],check=True)
     print('Official J++ source ready:',dest,COMMIT)
 
 if __name__=='__main__':main()

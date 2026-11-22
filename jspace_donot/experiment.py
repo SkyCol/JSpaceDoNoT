@@ -39,7 +39,10 @@ def run_experiment(config:ExperimentConfig):
     output.mkdir(parents=True,exist_ok=True)
     package_root=Path(__file__).resolve().parents[1]
     env=os.environ.copy()
-    env['PYTHONPATH']=str(package_root)+os.pathsep+env.get('PYTHONPATH','')
+    source_root=root/'external/jpp_lens/src'
+    search_paths=[str(package_root)]
+    if source_root.is_dir():search_paths.append(str(source_root))
+    env['PYTHONPATH']=os.pathsep.join(search_paths)+os.pathsep+env.get('PYTHONPATH','')
     payload={k:str(v) if isinstance(v,Path) else v for k,v in asdict(config).items()}
     payload['root']=str(root);payload['output']=str(output)
     subprocess.run([sys.executable,'-m','jspace_donot.worker',json.dumps(payload)],env=env,check=True)

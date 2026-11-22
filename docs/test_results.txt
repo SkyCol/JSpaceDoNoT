@@ -22,6 +22,23 @@ test_stop_only_when_usable_and_above_cutoff (test_pipeline.Policies.test_stop_on
 test_every_n_checks (test_pipeline.Schedules.test_every_n_checks) ... ok
 test_no_fake_wait_substring (test_pipeline.Schedules.test_no_fake_wait_substring) ... ok
 test_wait_cue_boundary_and_lookahead (test_pipeline.Schedules.test_wait_cue_boundary_and_lookahead) ... ok
+test_mismatched_model_is_rejected (test_preparation.FullPreparation.test_mismatched_model_is_rejected) ... ok
+test_missing_lens_triggers_original_fitting_after_wikitext (test_preparation.FullPreparation.test_missing_lens_triggers_original_fitting_after_wikitext) ... Saved all three independent heatmaps.
+Saved Appendix figures to: /tmp/tmpybyjspnq/interpretation
+Shared color scale maximum: 9.943187729097982
+PREPARE: download Qwen3-4B
+PREPARE: pinned official J++ source (no package installation)
+PREPARE: WikiText-103 RAW TRAIN + original prompt pool
+FIT: official J++ routers -> LRP expert Jacobians -> signed weights -> combined lens
+READY: fitted J++ lens /tmp/tmpmf3wxatp/jlens_outputs/qwen3_4b/jpp_fit/test-completed/qwen3_4b_jpp_lens.pt
+PREPARE: task dataset gsm8k
+REUSE: Qwen3-4B /tmp/tmpmf3wxatp/base_models/Qwen3-4B
+PREPARE: pinned official J++ source (no package installation)
+PREPARE: WikiText-103 RAW TRAIN + original prompt pool
+READY: fitted J++ lens /tmp/tmpmf3wxatp/jlens_outputs/qwen3_4b/jpp_fit/test-completed/qwen3_4b_jpp_lens.pt
+ok
+test_insufficient_prompts_fail (test_preparation.WikiTextPrompts.test_insufficient_prompts_fail) ... ok
+test_original_order_threshold_and_unstripped_text (test_preparation.WikiTextPrompts.test_original_order_threshold_and_unstripped_text) ... ok
 test_bad_gold_rejected (test_prepare_gsm8k.GSM8KPreparation.test_bad_gold_rejected) ... ok
 test_duplicate_rejected (test_prepare_gsm8k.GSM8KPreparation.test_duplicate_rejected) ... ok
 test_gold (test_prepare_gsm8k.GSM8KPreparation.test_gold) ... ok
@@ -29,9 +46,6 @@ test_rows (test_prepare_gsm8k.GSM8KPreparation.test_rows) ... ok
 test_real_backbone_hooks_lens_transport_and_score_readout (test_readout_cpu.TinyQwenReadout.test_real_backbone_hooks_lens_transport_and_score_readout) ... ok
 
 ----------------------------------------------------------------------
-Ran 25 tests in 4.752s
+Ran 29 tests in 6.547s
 
 OK
-Saved all three independent heatmaps.
-Saved Appendix figures to: /tmp/tmp6qr7gu8m/interpretation
-Shared color scale maximum: 9.943187729097982

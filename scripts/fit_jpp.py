@@ -7,6 +7,10 @@ def main(argv=None):
     parser=argparse.ArgumentParser()
     parser.add_argument('--root',default='.')
     parser.add_argument('--repo',default=None)
+    parser.add_argument('--model-dir',default=None)
+    parser.add_argument('--prompts-json',default=None)
+    parser.add_argument('--layers-per-group',type=int,default=4)
+    parser.add_argument('--jacobian-rows-per-pass',type=int,default=8)
     args=parser.parse_args(argv)
     # Reference extraction of Qwen3_4B_fit_official_JPlusPlus_Lens (1).ipynb; requires notebook environment and external dependencies.
 
@@ -17,13 +21,13 @@ def main(argv=None):
     REPO_DIR = Path(args.repo).resolve() if args.repo else ROOT / 'external' / 'jpp_lens'
     OFFICIAL_COMMIT = 'd7efc0de372e20589e899188c0cfe8434acc63ec'
     MODEL_ID = 'Qwen/Qwen3-4B'
-    MODEL_DIR = ROOT / 'base_models' / 'Qwen3-4B'
+    MODEL_DIR = Path(args.model_dir).expanduser().resolve() if args.model_dir else ROOT / 'base_models' / 'Qwen3-4B'
     ARTIFACT_ROOT = ROOT / 'jlens_outputs' / 'qwen3_4b' / 'jpp_fit'
     EXPERIMENT_TAG = 'official_qwen3_4b_v1'
 
     SOURCE_BLOCKS = None       # None = 0...34, target = final block 35.
-    LAYERS_PER_GROUP = 4       # Increase for speed if HOST RAM allows.
-    JACOBIAN_ROWS_PER_PASS = 8 # Lower to 4 or 2 for lower GPU memory.
+    LAYERS_PER_GROUP = args.layers_per_group       # Increase for speed if HOST RAM allows.
+    JACOBIAN_ROWS_PER_PASS = args.jacobian_rows_per_pass # Lower to 4 or 2 for lower GPU memory.
     CPU_THREADS = 8
     N_ROUTER_PROMPTS = 1000
     N_JACOBIAN_PROMPTS = 64
@@ -33,7 +37,7 @@ def main(argv=None):
     PCA_DIM = 64
     MIN_EXPERT_POSITIONS = 50
     SEED = 0
-    WIKITEXT_PROMPTS_JSON = None  # Optional existing JSON list of >=1,000 strings.
+    WIKITEXT_PROMPTS_JSON = args.prompts_json  # Optional existing JSON list of >=1,000 strings.
 
     DEVELOPMENT_FRACTION = 0.20
     READOUT_MAX_SEQ_LEN = 512
@@ -58,6 +62,11 @@ def main(argv=None):
     from datetime import datetime, timezone
     actual_commit=subprocess.check_output(['git','-C',str(REPO_DIR),'rev-parse','HEAD'],text=True).strip()
     if actual_commit!=OFFICIAL_COMMIT:raise RuntimeError('Official J++ checkout differs from the fitting recipe commit')
+    # Explicit data-preparation step before loading a GPU model; same prompt list as the source notebook.
+    if WIKITEXT_PROMPTS_JSON is None:
+        subprocess.run([sys.executable,str(Path(__file__).with_name('prepare_wikitext103.py')),
+            '--root',str(ROOT),'--n-prompts',str(N_ROUTER_PROMPTS)],check=True)
+        WIKITEXT_PROMPTS_JSON = str(ARTIFACT_ROOT / f'wikitext103_raw_train_first_{N_ROUTER_PROMPTS}_minchars600.json')
     sys.path.insert(0, str(REPO_DIR / 'src'))
     sys.path.insert(0, str(REPO_DIR / 'scripts'))
 

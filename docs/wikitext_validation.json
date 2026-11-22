@@ -1,0 +1,18 @@
+{
+  "prompts": 1000,
+  "exact_equal_to_pinned_official_loader": true,
+  "prompts_sha256": "8dc1795b2656e4a25f868ab48ba7ba3c71d51f8f616280448440813e88797ac3",
+  "source_manifest": {
+    "dataset": "Salesforce/wikitext",
+    "config": "wikitext-103-raw-v1",
+    "split": "train",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "selection": "original row order; first N records with len(text.strip()) >= min_chars; original text preserved",
+    "n_prompts": 1000,
+    "min_chars": 600,
+    "default_jacobian_prompts": 64,
+    "prompts_sha256": "8dc1795b2656e4a25f868ab48ba7ba3c71d51f8f616280448440813e88797ac3",
+    "file_sha256": "4300fc5a5ddbc5a10598f0da4c50cf17494374337046806937ec9501916ba225",
+    "full_training_download": true
+  }
+}

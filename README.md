@@ -4,17 +4,57 @@ Qwen3-4B experiments on **GSM8K, MATH-500 and RACE-H**, with reusable method and
 
 This package continues the November 17 `JSpaceDoNoT_GitHub.zip`. The uploaded November 21 notebooks are the authority for experimental settings. Only the J++ stop heads (LR and MLP) are fitted and evaluated. Other-method code and comparison plots are removed. Full forced-answer results remain in a separate `full_reference.csv` for protocol auditing and token-cost context.
 
+## Complete workflow from a clean checkout
+
+Open **`Run_JSpaceDoNOT.ipynb`** and run in order. Its preparation cell now explicitly performs the whole sequence:
+
+1. Download missing official Qwen3-4B weights (or reuse `MODEL_DIR`).
+2. Fetch the pinned official J++ source, without installing/downgrading your environment.
+3. Download **WikiText-103 RAW TRAIN**, save it locally, and create the exact original J++ 1,000-prompt pool.
+4. If no completed matching J++ lens is available, run the original full router / LRP expert-Jacobian / signed-weight fitting and export `.pt` + manifest.
+5. Download/process the selected task datasets.
+6. Pass the resolved lens file directly into the three JSpaceDoNOT experiments and interpretation.
+
+Equivalent commands:
+
+```bash
+python prepare.py --root .
+python run.py --dataset gsm8k
+python run.py --dataset math500
+python run.py --dataset raceh
+```
+
+Or prepare and run a single dataset together:
+
+```bash
+python run.py --dataset gsm8k --prepare
+```
+
+`prepare.py --datasets gsm8k` prepares only that task. It still performs the **full original J++ fit** when the lens is missing; reducing task sample counts does not make lens fitting cheaper. Existing completed lens files or their containing folders can be supplied with `--lens-path`; the selected lens and model checksums are validated. `--model-dir` reuses model files outside the preparation root. `--fit-python /path/to/jpp-env/bin/python` runs fitting in an existing separate environment; evaluation continues in the current environment.
+
+For independent WikiText preparation:
+
+```bash
+python scripts/prepare_wikitext103.py --root .
+```
+
+This uses `Salesforce/wikitext`, **`wikitext-103-raw-v1`**, TRAIN. It is a Wikipedia-derived corpus, not a download of the whole Wikipedia site. The full training dataset is materialized under `data/wikitext103_raw/train/`; the resolved revision is recorded. The pool is written to `jlens_outputs/qwen3_4b/jpp_fit/wikitext103_raw_train_first_1000_minchars600.json`. Selection exactly follows the uploaded J++ recipe: original row order, first 1,000 records with `len(text.strip()) >= 600`, original text retained, no shuffle; Jacobian fitting uses the first 64. `--stream` optionally downloads only enough data for the pool. Do not substitute the ordinary J-lens notebook's shuffled seed43, 64-prompt corpus.
+
+Fitting keeps seed **0**, all source blocks 0–34, final target 35, eight experts, sequence length 128 and skip-first 16. Only `--layers-per-group` and `--jacobian-rows-per-pass` are exposed for memory tuning; their defaults remain 4 and 8. Stopping experiments retain seed **2026**. The preparation API reuses completed fits; it never forces a full refit just because a new report folder is created.
+
+The standalone smoke notebook also contains this complete asset-preparation stage. It can reuse your explicit existing lens, or fit a missing one before the 8-TRAIN/2-TEST task validation.
+
 ## Install
 
 Use **Python 3.12** and CUDA-capable PyTorch supporting BF16. Install the PyTorch build appropriate for your GPU first, then:
 
 ```bash
 pip install -r requirements.txt
-python scripts/setup_jpp.py --root .
+python scripts/setup_jpp.py --root . --source-only
 pip install --no-deps -e .
 ```
 
-The setup script checks out the fitting recipe's upstream commit `d7efc0de372e20589e899188c0cfe8434acc63ec` from [safety-research/jpp_lens](https://github.com/safety-research/jpp_lens). This provides `jlens`, `workspace_lens`, and `lens_evals`. It uses `--no-deps` because the upstream project's declared environment differs from the supplied experiment's Transformers 4 environment; it must not replace that environment silently. The recipe imports and a tiny CPU Qwen3 readout are checked separately; a complete GPU fit remains to be run. Existing experimental environments can keep their installed versions; each completed run exports `environment.json`.
+The setup script checks out the fitting recipe's upstream commit `d7efc0de372e20589e899188c0cfe8434acc63ec` from [safety-research/jpp_lens](https://github.com/safety-research/jpp_lens). This source provides `jlens`, `workspace_lens`, and `lens_evals`; fitting and experiment subprocesses use it directly. If you explicitly omit `--source-only`, the setup script installs it with `--no-deps` because the upstream project's declared environment differs from the supplied experiment environment; it must not replace that environment silently. The recipe imports and a tiny CPU Qwen3 readout are checked separately; a complete GPU fit remains to be run here. `requirements.txt` is a base dependency list, not a validated lock for every GPU environment. Its earlier unverified Transformers `<5` restriction has been removed; preserve your working environment and export exact versions after a successful GPU run. Existing experimental environments can keep their installed versions; each completed run exports `environment.json`.
 
 ## 1. Download Qwen3-4B
 
@@ -67,7 +107,7 @@ For a new fit, the official J++ recipe recovered from the earlier package is now
 python scripts/fit_jpp.py --root .
 ```
 
-It prepares WikiText-103 raw training prompts through the original `jlens.examples.load_wikitext_prompts`, fits activation routers and LRP expert Jacobians, fits signed expert weights on the original readout development items, and saves combined FP32 maps plus the exact model-asset manifest. Its original defaults are retained: router prompts 1,000; Jacobian prompts 64; sequence length 128; skip-first 16; 8 experts; router PCA dimension 64; all source blocks 0–34 to final block 35; fitting seed **0**. Stop-head experiments separately use seed **2026**. The fitting script resumes completed stages using their original identity guards. This is an expensive GPU job; skip it when you already have the matching completed lens. No GSM8K/MATH/RACE examples are used to fit that lens.
+It reads the explicitly prepared WikiText-103 raw prompt JSON using the same selection as the original `jlens.examples.load_wikitext_prompts`, fits activation routers and LRP expert Jacobians, fits signed expert weights on the original readout development items, and saves combined FP32 maps plus the exact model-asset manifest. Its original defaults are retained: router prompts 1,000; Jacobian prompts 64; sequence length 128; skip-first 16; 8 experts; router PCA dimension 64; all source blocks 0–34 to final block 35; fitting seed **0**. Stop-head experiments separately use seed **2026**. The fitting script resumes completed stages using their original identity guards. This is an expensive GPU job; skip it when you already have the matching completed lens. No GSM8K/MATH/RACE examples are used to fit that lens.
 
 ## 4. Run the three experiments
 

@@ -20,6 +20,7 @@ def make_parser():
     p.add_argument('--source-mode',choices=['auto','historical','fresh'],default='auto')
     p.add_argument('--output',type=Path)
     p.add_argument('--lens-path',type=Path)
+    p.add_argument('--prepare',action='store_true',help='Download model/WikiText, fit missing J++ lens, and prepare this dataset first')
     p.add_argument('--dry-run',action='store_true')
     return p
 
@@ -39,6 +40,11 @@ def main(argv=None):
         print(cfg)
         print('\n'.join(missing) if missing else 'Prerequisites found; model not loaded.')
         return int(bool(missing))
+    if args.prepare:
+        from dataclasses import replace
+        from jspace_donot import prepare_assets
+        assets=prepare_assets(root=cfg.root,datasets=(cfg.dataset,),lens_path=cfg.lens_path)
+        cfg=replace(cfg,lens_path=assets.lens_path)
     result=run_experiment(cfg);print('Results:',result.output)
     return 0
 

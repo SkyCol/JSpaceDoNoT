@@ -1,0 +1,46 @@
+{
+  "uploaded_sha256": "df95207b8860ac9cf4dcaad7066a444c6736bb4804e164ca95448553332b4bc5",
+  "cells": {
+    "5": {
+      "total_statements": 18,
+      "exact_unchanged_statements": 18,
+      "different_statements": []
+    },
+    "6": {
+      "total_statements": 23,
+      "exact_unchanged_statements": 23,
+      "different_statements": []
+    },
+    "8": {
+      "total_statements": 22,
+      "exact_unchanged_statements": 22,
+      "different_statements": []
+    },
+    "10": {
+      "total_statements": 3,
+      "exact_unchanged_statements": 3,
+      "different_statements": []
+    },
+    "12": {
+      "total_statements": 3,
+      "exact_unchanged_statements": 2,
+      "different_statements": [
+        "for group in GROUPS:\n    name = group_name(group)\n    directory = EXPERT_DIR / name\n    directory.mkdir(parents=True, exist_ok=True)\n    path = directory / 'experts.pt'\n    expert_paths[name] = path\n    if path.is_file():\n        print('REUSE expert Jacobians:', name, flush=True)\n        continue\n    router = ActivationRouterCollection.load(str(ROU"
+      ]
+    },
+    "14": {
+      "total_statements": 12,
+      "exact_unchanged_statements": 11,
+      "different_statements": [
+        "for group in GROUPS:\n    name = group_name(group)\n    missing = [layer for layer in group if not (OUT / f'layer_{layer:02d}.done.json').is_file()]\n    for layer in group:\n        layer_paths[layer] = OUT / f'layer_{layer:02d}.pt'\n    if not missing:\n        print('REUSE all expert weights:', name, flush=True)\n        continue\n    experts = ExpertJa"
+      ]
+    },
+    "16": {
+      "total_statements": 17,
+      "exact_unchanged_statements": 17,
+      "different_statements": []
+    }
+  },
+  "all_fitting_stage_statements_equal_after_save_callback_binding_normalization": true,
+  "save_callback_note": "Only the synchronous save callback binds its pooled/lens object through a default argument; fitting mathematics unchanged."
+}
